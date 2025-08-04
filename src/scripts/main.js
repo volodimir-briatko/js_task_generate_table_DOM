@@ -355,6 +355,33 @@ const people = [
 ];
 
 // eslint-disable-next-line no-console
-console.log(people); // you can remove it
+let male;
+
+for (const i in people) {
+  const el = people[i];
+  const tr = document.createElement('tr');
+
+  if (el.sex === 'm') {
+    male = 'Male';
+  } else {
+    male = 'Female';
+  }
+
+  tr.innerHTML =
+    '<td>' +
+    el.name +
+    '</td><td>' +
+    male +
+    '</td><td>' +
+    el.born +
+    '</td><td>' +
+    el.died +
+    '</td><td>' +
+    (el.died - el.born) +
+    '</td><td>' +
+    Math.ceil(el.died / 100) +
+    '</td>';
+  document.querySelector('.dashboard').append(tr);
+}
 
 // write your code here
