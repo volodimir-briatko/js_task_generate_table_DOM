@@ -357,8 +357,7 @@ const people = [
 // eslint-disable-next-line no-console
 let male;
 
-for (const i of people) {
-  const el = people[i];
+for (const el of people) {
   const tr = document.createElement('tr');
 
   if (el.sex === 'm') {
