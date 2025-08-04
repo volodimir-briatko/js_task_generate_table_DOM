@@ -357,7 +357,7 @@ const people = [
 // eslint-disable-next-line no-console
 let male;
 
-for (const i in people) {
+for (const i of people) {
   const el = people[i];
   const tr = document.createElement('tr');
 
